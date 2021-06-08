@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem de Serviço</title>
+
+    <link rel="stylesheet" href="resources/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="resources/css/ordem-servico.css">
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a href="#" class="navbar-brand logo">
+            <img src="resources/img/logo.png" alt="logo"> App
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbar">
+
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">Ordens de serviço</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Clientes</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Funcionários</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Serviços</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Inicio</a>
+            </li>
+                
+            <li class="breadcrumb-item">
+                <a href="#">Ordem de serviço</a>
+            </li>
+
+            <li class="breadcrumb-item active">
+                Pesquisa
+            </li>
+        </ol>
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h1>Ordem de Serviço</h1>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Pesquisar por nome do cliente">
+
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-outline-secondary">
+                                <span class="fa fa-search"> Pesquisar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive mt-4">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Cod.</th>
+                        <th>Data</th>
+                        <th>Cliente</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>123</td>
+                        <td>10/05/2021</td>
+                        <td>Victor</td>
+                        <td><span class="badge badge-dark">Em andamento</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>685</td>
+                        <td>10/05/2021</td>
+                        <td>Gerald</td>
+                        <td><span class="badge badge-warning">Em andamento</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>415</td>
+                        <td>10/05/2021</td>
+                        <td>Steve</td>
+                        <td><span class="badge badge-danger">Falha</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>36</td>
+                        <td>10/05/2021</td>
+                        <td>Mário</td>
+                        <td><span class="badge badge-success">Sucesso</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="d-flex">
+            <div class="mr-auto">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nova-os">
+                    Nova ordem de serviço
+                </button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="nova-os">
+
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Nova ordem de serviço</h4>
+
+                        <button type="button" class="close" data-dismiss="modal">Fechar</button>
+                    </div>
+
+                    <form action="">
+                        <div class="modal-body">
+
+                            <div class="row">
+                                <div class="form-group col-5">
+                                    <label for="" class="col-form-label">Código da OS</label>
+
+                                    <p name="codigo-os">444</p>
+                                </div>
+
+                                <div class="form-group col-7">
+                                    <label for="valor" class="col-form-label">Valor</label>
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <span>R$</span>
+                                            </div>
+                                        </div>
+
+                                        <input type="text" class="form-control" placeholder="Digite o valor" id="valor">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-success">Salvar</button>
+                        </div>
+
+                    </form>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+<script src="resources/jquery/jquery-3.4.1.min.js"></script>
+<script src="resources/popper/popper.min.js"></script>
+<script src="resources/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
